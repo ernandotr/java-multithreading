@@ -22,7 +22,6 @@ public class MultithreadLambda {
         
     }
 
-
     private void process() {
         System.out.println(Thread.currentThread().getName());
         try {
