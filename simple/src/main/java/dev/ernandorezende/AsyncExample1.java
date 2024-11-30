@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ExemploAssincrono1 {
+public class AsyncExample1 {
 
-    private static int varCompartilhada = 0;
+    private static int sharedVar = 0;
     private static final Integer QUANTIDADE = 10000;
     private static final List<Integer> VALORES = Collections.synchronizedList(new ArrayList<>());
 
@@ -16,7 +16,7 @@ public class ExemploAssincrono1 {
             @Override
             public void run() {
                 for (int i = 0; i < QUANTIDADE; i++) {
-                    VALORES.add(++varCompartilhada);
+                    VALORES.add(++sharedVar);
                 }
             }
         });
@@ -25,7 +25,7 @@ public class ExemploAssincrono1 {
             @Override
             public void run() {
                 for (int i = 0; i < QUANTIDADE; i++) {
-                    VALORES.add(++varCompartilhada);
+                    VALORES.add(++sharedVar);
                 }
             }
         });
@@ -34,7 +34,7 @@ public class ExemploAssincrono1 {
             @Override
             public void run() {
                 for (int i = 0; i < QUANTIDADE; i++) {
-                    VALORES.add(++varCompartilhada);
+                    VALORES.add(++sharedVar);
                 }
             }
         });
