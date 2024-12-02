@@ -9,6 +9,7 @@ public class ExemploThread {
         System.out.println("Priority: " + Thread.currentThread().getPriority());
         System.out.println("State: " + Thread.currentThread().getState());
         System.out.println();
+        
         new Thread(new Runnable() {
             @Override
             public void run() {
