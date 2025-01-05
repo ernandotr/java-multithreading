@@ -14,7 +14,7 @@ public class CalculatorScreen {
         JLabel result = new JLabel("     ?     ");
 
         multiplyBnt.addActionListener(e -> {
-            MultiplicationTask task = new MultiplicationTask(first, second, result);
+            Runnable task = new MultiplicationTask(first, second, result);
             Thread thread = new Thread(task);
             thread.start();
         });
