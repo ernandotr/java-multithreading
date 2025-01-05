@@ -1,2 +1,4 @@
 *.class
+simple/target/classes/dev/ernandorezende/App.class
+simple/target/classes/dev/ernandorezende/MyThread.class
 
