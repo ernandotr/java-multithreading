@@ -20,7 +20,7 @@ public class SearchNameTask implements Runnable {
             int lineNumber = 1;
             while(scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                if(line.toLowerCase().contains(search.toLowerCase())) {
+                if(line.matches(search)) {
                     System.out.println(lineNumber + ": " + line);
                 }
             }
