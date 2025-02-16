@@ -1,7 +1,12 @@
 package dev.ernandorezende;
+
+import java.util.logging.Logger;
+
 public class MyRunnable implements Runnable{
 
-    private String documentName;
+    private final Logger logger = Logger.getLogger("MyRunnable");
+
+    private final String documentName;
 
     public MyRunnable(String documentName){
         this.documentName = documentName;
@@ -13,9 +18,9 @@ public class MyRunnable implements Runnable{
         try {
             Thread.sleep(10000L);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            logger.severe("Thread interrupted");
         }
-        System.out.println("Documente generated: " + this.documentName);
+        System.out.println("Document generated: " + this.documentName);
     }
 
     @Override
