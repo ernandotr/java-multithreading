@@ -1,6 +1,14 @@
+package dev.ernandorezende;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class MultithreadLambda {
 
+    private Logger logger = Logger.getLogger(MultithreadLambda.class.getName());
+
     public static void main(String[] args) {
+
         var tasks = new MultithreadLambda();
         Runnable r1 = () -> {
             System.out.println("Generating document dco one..." );
@@ -27,7 +35,7 @@ public class MultithreadLambda {
         try {
             Thread.sleep(10000L);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Error", e);
         }
     }
 
