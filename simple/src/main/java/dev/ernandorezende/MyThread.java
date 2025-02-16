@@ -1,7 +1,12 @@
 package dev.ernandorezende;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class MyThread extends Thread{
-    private String docName;
+
+    private final Logger logger = Logger.getLogger("MyThread");
+    private final String docName;
 
     public MyThread(String docName){
         this.docName = docName;
@@ -13,9 +18,9 @@ public class MyThread extends Thread{
         try {
             Thread.sleep(1000L);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Thread was interrupted", e);
         }
-        System.out.println("Documente generated: " + this.docName);
+        System.out.println("Document generated: " + this.docName);
     }
 
     @Override
