@@ -3,10 +3,8 @@ package dev.ernandorezende;
 import java.util.concurrent.Executors;
 
 public class VirtualThreadsExample {
-    public static void main(String[] args) throws InterruptedException {
-        Runnable task = () -> {
-            System.out.println(Thread.currentThread());
-        };
+    public static void main(String[] args) {
+        Runnable task = () -> System.out.println(Thread.currentThread());
 
         Thread.startVirtualThread(task);
 
