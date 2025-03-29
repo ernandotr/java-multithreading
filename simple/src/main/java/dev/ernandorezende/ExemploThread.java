@@ -8,7 +8,6 @@ public class ExemploThread {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                //código para executar em paralelo
                 System.out.println(">> New thread");
                 printThreadInfo();
             }
